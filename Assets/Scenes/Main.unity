@@ -1649,6 +1649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 530794195}
   - component: {fileID: 530794196}
+  - component: {fileID: 530794197}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1682,6 +1683,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cee11df8711684091d9504952e2cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &530794197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530794194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aef3cf0c6a83fa4eac12b2b013850ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSets:
+  - spriteType: 0
+    neutralSprite: {fileID: 21300000, guid: f9e3839b24758ed4f8ed77092b87d13a, type: 3}
+    playerSprites:
+    - {fileID: 21300000, guid: 1ec841a043ac90144bd92edb7f1b5582, type: 3}
+    - {fileID: 21300000, guid: 838011309cfd5cd48b0befb4af70f194, type: 3}
+    - {fileID: 21300000, guid: 37276a6c87c1b3941a9ead4f3c206626, type: 3}
+    - {fileID: 21300000, guid: 5c3895d5d5695834583a0fd243161742, type: 3}
+  - spriteType: 1
+    neutralSprite: {fileID: 0}
+    playerSprites:
+    - {fileID: 21300000, guid: 9bea57b88d9a5924eb81cc4bdab8d2eb, type: 3}
+    - {fileID: 21300000, guid: 8476523479b68194e870b838a9d48490, type: 3}
+    - {fileID: 21300000, guid: ac2cf79a62ab7d34aa4c5d76748ab72f, type: 3}
+    - {fileID: 21300000, guid: 0f8aa5568fd32bb41b660fed72dc1cfe, type: 3}
+  - spriteType: 2
+    neutralSprite: {fileID: 21300000, guid: 4430edd242bcdea4c9e8fde8ae9e91fc, type: 3}
+    playerSprites:
+    - {fileID: 21300000, guid: 75eae2900326aa447b250fdb4817639c, type: 3}
+    - {fileID: 21300000, guid: 7359db0efb8044c40a8e6532d15e8e86, type: 3}
+    - {fileID: 21300000, guid: 2351064c68164374e896c39f9e7b9512, type: 3}
+    - {fileID: 21300000, guid: 05111c25c4203324aa1fa1ac5caafa5b, type: 3}
 --- !u!1 &535534596
 GameObject:
   m_ObjectHideFlags: 0

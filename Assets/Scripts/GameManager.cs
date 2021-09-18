@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
 
+    public static SpriteSystem SpriteSystem { get; private set; }
+
     protected void Awake()
     {
         if (instance != null)
@@ -14,5 +16,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         instance = this;
+
+        SpriteSystem = GetComponent<SpriteSystem>();
     }
 }
