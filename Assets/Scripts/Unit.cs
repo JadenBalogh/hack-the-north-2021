@@ -2,18 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unit : MonoBehaviour
+public class Unit : PlayerObject
 {
-    [SerializeField] private float moveSpeed;
+    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float enemyDetectRadius = 1f;
 
     private UnitSpawner origin;
     private UnitSpawner target;
+    private PlayerObject currentEnemy;
 
-    private void Update()
+    private Collider2D[] overlapResults = new Collider2D[50];
+
+    protected void Update()
     {
-        // Move towards the target spawner
-        if (target != null)
+        // Check for enemy in range
+        if (currentEnemy == null)
         {
+            FindNearestEnemy();
+        }
+
+        if (currentEnemy != null)
+        {
+            // Attack current enemy if valid
+            
+        }
+        else if (target != null)
+        {
+            // Move towards the target spawner
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
             if (Utils.InRange(transform, target.transform, 0.01f))
             {
@@ -28,5 +43,18 @@ public class Unit : MonoBehaviour
     {
         this.origin = origin;
         this.target = target;
+    }
+
+    private void FindNearestEnemy()
+    {
+        int numResults = Physics2D.OverlapCircleNonAlloc(transform.position, enemyDetectRadius, overlapResults);
+        for (int i = 0; i < numResults; i++)
+        {
+            Collider2D col = overlapResults[i];
+            if (col.TryGetComponent<PlayerObject>(out PlayerObject obj) && IsEnemy(obj))
+            {
+                currentEnemy = obj;
+            }
+        }
     }
 }

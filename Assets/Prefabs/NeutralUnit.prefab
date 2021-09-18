@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8412156700495238266}
   - component: {fileID: 8412156700495238245}
+  - component: {fileID: 4511140476225781755}
   - component: {fileID: 5401872637131996933}
   m_Layer: 0
   m_Name: NeutralUnit
@@ -83,6 +84,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &4511140476225781755
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412156700495238244}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &5401872637131996933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,4 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e4034551d1e014eaa50095aae1c521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultPlayerId: -1
   moveSpeed: 1
+  enemyDetectRadius: 0.8

@@ -2,34 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitSpawner : MonoBehaviour
+public class UnitSpawner : PlayerObject
 {
-    [SerializeField] private int defaultPlayerId;
-    private int playerId;
-    public int PlayerId
-    {
-        get => playerId;
-        set
-        {
-            ValidatePaths();
-            playerId = value;
-        }
-    }
-
     [SerializeField] private UnitPath[] paths;
     [SerializeField] private Unit baseUnitPrefab;
     [SerializeField] private float baseSpawnRate = 1f;
 
     private WaitForSeconds baseSpawnRateWait;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         baseSpawnRateWait = new WaitForSeconds(baseSpawnRate);
-        playerId = defaultPlayerId;
     }
 
-    private void Start()
+    protected void Start()
     {
+        OnPlayerIdChanged.AddListener((id) => ValidatePaths());
         ValidatePaths();
         StartCoroutine(SpawnUnitsLoop());
     }
@@ -52,7 +41,7 @@ public class UnitSpawner : MonoBehaviour
         foreach (UnitPath path in paths)
         {
             bool prevActiveStatus = path.Active;
-            bool newActiveStatus = playerId != path.endpoint.PlayerId;
+            bool newActiveStatus = IsEnemy(path.endpoint);
             path.Active = newActiveStatus;
             if (prevActiveStatus != newActiveStatus)
             {
