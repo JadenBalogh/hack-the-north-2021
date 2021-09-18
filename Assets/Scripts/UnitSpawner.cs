@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class UnitSpawner : PlayerObject
 {
@@ -21,7 +22,11 @@ public class UnitSpawner : PlayerObject
         base.Start();
         OnPlayerIdChanged.AddListener((id) => ValidatePaths());
         ValidatePaths();
-        StartCoroutine(SpawnUnitsLoop());
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            StartCoroutine(SpawnUnitsLoop());
+        }
     }
 
     public UnitSpawner GetNextSpawner(UnitSpawner origin)
@@ -65,9 +70,12 @@ public class UnitSpawner : PlayerObject
             foreach (UnitPath path in paths)
             {
                 if (!path.Active) continue;
-                Unit unit = Instantiate(baseUnitPrefab, path.spawnpoint.position, Quaternion.identity);
-                unit.SetPath(this, path.endpoint);
-                unit.PlayerId = PlayerId;
+                object[] obj = new object[]
+                {
+                    photonView.ViewID,
+                    path.endpoint.photonView.ViewID
+                };
+                PhotonNetwork.Instantiate(baseUnitPrefab.name, path.spawnpoint.position, Quaternion.identity, 0, obj);
             }
             yield return baseSpawnRateWait;
         }
