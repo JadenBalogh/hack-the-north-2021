@@ -38,7 +38,6 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public void SetPlayerName(string name)
     {
         PhotonNetwork.LocalPlayer.NickName = name;
-        Debug.Log("Changed name to " + name);
     }
 
     public void StartGame()
@@ -57,7 +56,6 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     private void Connect()
     {
-        Debug.Log("Connect");
         if (!PhotonNetwork.IsConnected)
         {
             PhotonNetwork.ConnectUsingSettings();
@@ -67,9 +65,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     private IEnumerator WaitJoinRoom()
     {
-        Debug.Log("Waiting for connection...");
         yield return new WaitUntil(() => isReady);
-        Debug.Log("Finished waiting for connection");
         PhotonNetwork.JoinRandomRoom();
     }
 
@@ -83,7 +79,6 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        Debug.Log("Another player joined!");
         if (PhotonNetwork.CurrentRoom.PlayerCount == PhotonNetwork.CurrentRoom.MaxPlayers)
         {
             StartGame();
@@ -96,13 +91,11 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
-        Debug.Log("Join random failed... creating new room");
         PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = PLAYERS_PER_ROOM });
     }
 
     public override void OnJoinedRoom()
     {
-        Debug.Log("Joined room successfully");
         SetPlayerName("Player" + PhotonNetwork.LocalPlayer.ActorNumber);
         RefreshLabels();
         if (PhotonNetwork.IsMasterClient)
@@ -113,12 +106,11 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        Debug.Log("Connected to master");
         isReady = true;
     }
 
     public override void OnDisconnected(DisconnectCause cause)
     {
-        Debug.LogWarning($"Get disconnected BOI: {cause}");
+        Debug.LogWarning($"Disconnected: {cause}");
     }
 }

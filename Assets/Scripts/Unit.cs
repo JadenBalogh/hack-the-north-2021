@@ -37,6 +37,7 @@ public class Unit : PlayerObject, IPunInstantiateMagicCallback
         if (currentEnemy != null)
         {
             // Attack current enemy if valid
+            transform.rotation = Quaternion.FromToRotation(Vector2.up, currentEnemy.transform.position - transform.position);
             if (canAttack)
             {
                 StartCoroutine(AttackCooldown());
@@ -59,7 +60,6 @@ public class Unit : PlayerObject, IPunInstantiateMagicCallback
 
     public void OnPhotonInstantiate(PhotonMessageInfo info)
     {
-        Debug.Log("Instantiated!");
         object[] data = info.photonView.InstantiationData;
         UnitSpawner origin = PhotonView.Find((int)data[0]).GetComponent<UnitSpawner>();
         UnitSpawner target = PhotonView.Find((int)data[1]).GetComponent<UnitSpawner>();
