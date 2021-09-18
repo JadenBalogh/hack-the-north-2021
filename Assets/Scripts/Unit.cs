@@ -9,6 +9,7 @@ public class Unit : PlayerObject, IPunInstantiateMagicCallback
     [SerializeField] private float enemyDetectRadius = 1f;
     [SerializeField] private int damage = 1;
     [SerializeField] private float attackCooldown = 0.8f;
+    [SerializeField] private int deathManaReward = 5;
 
     private UnitSpawner origin;
     private UnitSpawner target;
@@ -76,6 +77,10 @@ public class Unit : PlayerObject, IPunInstantiateMagicCallback
     protected override void Die(int killerId)
     {
         base.Die(killerId);
+        if (PhotonNetwork.LocalPlayer.ActorNumber == killerId)
+        {
+            GameManager.ManaSystem.AddMana(deathManaReward);
+        }
         if (PhotonNetwork.IsMasterClient)
         {
             PhotonNetwork.Destroy(gameObject);
