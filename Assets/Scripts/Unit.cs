@@ -43,6 +43,7 @@ public class Unit : PlayerObject
         else if (target != null)
         {
             // Move towards the target spawner
+            transform.rotation = Quaternion.FromToRotation(Vector2.up, target.transform.position - transform.position);
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
             if (Utils.InRange(transform, target.transform, 0.01f))
             {
