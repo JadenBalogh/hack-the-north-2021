@@ -16,7 +16,6 @@ public class InputManager : MonoBehaviour
 
     public void ReadInput(string myStr)
     {
-
         Debug.Log(myStr);
     }
 }
