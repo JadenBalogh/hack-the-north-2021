@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SpriteSystem : MonoBehaviour
 {
-    public enum SpriteType { Unit, Spawner, Tower }
-
     [SerializeField] private SpriteSet[] spriteSets;
 
     public Sprite GetSprite(SpriteType spriteType, int playerId)

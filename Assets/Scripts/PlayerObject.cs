@@ -13,10 +13,14 @@ public abstract class PlayerObject : MonoBehaviour
         set
         {
             playerId = value;
+            SetSprite(GameManager.SpriteSystem.GetSprite(spriteType, playerId));
             OnPlayerIdChanged.Invoke(playerId);
         }
     }
     public UnityEvent<int> OnPlayerIdChanged { get; private set; }
+
+    [SerializeField] private SpriteType spriteType;
+    public SpriteType SpriteType { get => spriteType; }
 
     [SerializeField] private int maxHealth = 1;
     public int Health { get; private set; }
@@ -41,6 +45,16 @@ public abstract class PlayerObject : MonoBehaviour
         Health = maxHealth;
 
         hitFlashDurationWait = new WaitForSeconds(hitFlashDuration);
+    }
+
+    protected virtual void Start()
+    {
+        SetSprite(GameManager.SpriteSystem.GetSprite(spriteType, playerId));
+    }
+
+    public void SetSprite(Sprite sprite)
+    {
+        spriteRenderer.sprite = sprite;
     }
 
     public virtual void TakeDamage(int attackerId, int damage)

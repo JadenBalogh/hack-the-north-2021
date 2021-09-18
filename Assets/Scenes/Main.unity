@@ -774,6 +774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: -1
+  spriteType: 2
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -782,7 +783,7 @@ MonoBehaviour:
     endpoint: {fileID: 691159956}
   - spawnpoint: {fileID: 101917037}
     endpoint: {fileID: 1588410244}
-  baseUnitPrefab: {fileID: 5401872637131996933, guid: 6820833dc83b3b4458a4969cf6c6adcc, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
 --- !u!61 &159691670
 BoxCollider2D:
@@ -1378,6 +1379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 1
+  spriteType: 1
   maxHealth: 20
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -1388,7 +1390,7 @@ MonoBehaviour:
     endpoint: {fileID: 1545485391}
   - spawnpoint: {fileID: 1081383914}
     endpoint: {fileID: 1451024933}
-  baseUnitPrefab: {fileID: 656354245373133453, guid: b351b2809ba38a04d8d6bc2fcb98a3ac, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 2
 --- !u!212 &416028133
 SpriteRenderer:
@@ -2011,6 +2013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
+  spriteType: 1
   maxHealth: 20
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -4167,6 +4170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: -1
+  spriteType: 2
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -4175,7 +4179,7 @@ MonoBehaviour:
     endpoint: {fileID: 691159956}
   - spawnpoint: {fileID: 8367755}
     endpoint: {fileID: 416028132}
-  baseUnitPrefab: {fileID: 5401872637131996933, guid: 6820833dc83b3b4458a4969cf6c6adcc, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
 --- !u!61 &1451024934
 BoxCollider2D:
@@ -6126,6 +6130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: -1
+  spriteType: 2
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -6134,7 +6139,7 @@ MonoBehaviour:
     endpoint: {fileID: 691159956}
   - spawnpoint: {fileID: 1178511995}
     endpoint: {fileID: 416028132}
-  baseUnitPrefab: {fileID: 5401872637131996933, guid: 6820833dc83b3b4458a4969cf6c6adcc, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
 --- !u!61 &1545485392
 BoxCollider2D:
@@ -6194,6 +6199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: -1
+  spriteType: 2
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -6202,7 +6208,7 @@ MonoBehaviour:
     endpoint: {fileID: 159691669}
   - spawnpoint: {fileID: 535534597}
     endpoint: {fileID: 416028132}
-  baseUnitPrefab: {fileID: 5401872637131996933, guid: 6820833dc83b3b4458a4969cf6c6adcc, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
 --- !u!212 &1588410245
 SpriteRenderer:
