@@ -6,12 +6,22 @@ public class Unit : PlayerObject
 {
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float enemyDetectRadius = 1f;
+    [SerializeField] private int damage = 1;
+    [SerializeField] private float attackCooldown = 0.8f;
 
     private UnitSpawner origin;
     private UnitSpawner target;
     private PlayerObject currentEnemy;
+    private bool canAttack = true;
 
     private Collider2D[] overlapResults = new Collider2D[50];
+    private WaitForSeconds attackCooldownWait;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        attackCooldownWait = new WaitForSeconds(attackCooldown);
+    }
 
     protected void Update()
     {
@@ -24,7 +34,11 @@ public class Unit : PlayerObject
         if (currentEnemy != null)
         {
             // Attack current enemy if valid
-            
+            if (canAttack)
+            {
+                StartCoroutine(AttackCooldown());
+                currentEnemy.TakeDamage(PlayerId, damage);
+            }
         }
         else if (target != null)
         {
@@ -45,6 +59,12 @@ public class Unit : PlayerObject
         this.target = target;
     }
 
+    protected override void Die(int killerId)
+    {
+        base.Die(killerId);
+        Destroy(gameObject);
+    }
+
     private void FindNearestEnemy()
     {
         int numResults = Physics2D.OverlapCircleNonAlloc(transform.position, enemyDetectRadius, overlapResults);
@@ -54,7 +74,15 @@ public class Unit : PlayerObject
             if (col.TryGetComponent<PlayerObject>(out PlayerObject obj) && IsEnemy(obj))
             {
                 currentEnemy = obj;
+                currentEnemy.OnDeath.AddListener(() => currentEnemy = null);
             }
         }
+    }
+
+    private IEnumerator AttackCooldown()
+    {
+        canAttack = false;
+        yield return attackCooldownWait;
+        canAttack = true;
     }
 }

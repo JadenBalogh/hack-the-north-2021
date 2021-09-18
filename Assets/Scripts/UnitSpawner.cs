@@ -50,6 +50,13 @@ public class UnitSpawner : PlayerObject
         }
     }
 
+    protected override void Die(int killerId)
+    {
+        base.Die(killerId);
+        PlayerId = killerId;
+        ResetHealth();
+    }
+
     private IEnumerator SpawnUnitsLoop()
     {
         while (true)

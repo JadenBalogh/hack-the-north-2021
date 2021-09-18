@@ -185,6 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 1
+  maxHealth: 20
+  hitFlashDuration: 0.2
+  hitFlashAlpha: 0.5
   paths:
   - spawnpoint: {fileID: 444298241}
     endpoint: {fileID: 1724800401}
@@ -401,6 +404,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: -1
+  maxHealth: 10
+  hitFlashDuration: 0.2
+  hitFlashAlpha: 0.5
   paths:
   - spawnpoint: {fileID: 1899880932}
     endpoint: {fileID: 691159956}
@@ -510,6 +516,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 1
+  maxHealth: 20
+  hitFlashDuration: 0.2
+  hitFlashAlpha: 0.5
   paths:
   - spawnpoint: {fileID: 887370971}
     endpoint: {fileID: 1588410244}
@@ -876,6 +885,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
+  maxHealth: 20
+  hitFlashDuration: 0.2
+  hitFlashAlpha: 0.5
   paths:
   - spawnpoint: {fileID: 1621766949}
     endpoint: {fileID: 159691669}
@@ -1210,6 +1222,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: -1
+  maxHealth: 10
+  hitFlashDuration: 0.2
+  hitFlashAlpha: 0.5
   paths:
   - spawnpoint: {fileID: 1345898495}
     endpoint: {fileID: 691159956}
@@ -3084,6 +3099,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: -1
+  maxHealth: 10
+  hitFlashDuration: 0.2
+  hitFlashAlpha: 0.5
   paths:
   - spawnpoint: {fileID: 1887392924}
     endpoint: {fileID: 691159956}
@@ -3149,6 +3167,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: -1
+  maxHealth: 10
+  hitFlashDuration: 0.2
+  hitFlashAlpha: 0.5
   paths:
   - spawnpoint: {fileID: 1395480954}
     endpoint: {fileID: 159691669}
@@ -3311,6 +3332,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
+  maxHealth: 20
+  hitFlashDuration: 0.2
+  hitFlashAlpha: 0.5
   paths:
   - spawnpoint: {fileID: 672621442}
     endpoint: {fileID: 101191464}
