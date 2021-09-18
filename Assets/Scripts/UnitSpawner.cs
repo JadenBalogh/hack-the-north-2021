@@ -5,7 +5,7 @@ using UnityEngine;
 public class UnitSpawner : MonoBehaviour
 {
     [SerializeField] private UnitPath[] paths;
-    [SerializeField] private GameObject baseUnitPrefab;
+    [SerializeField] private Unit baseUnitPrefab;
     [SerializeField] private float baseSpawnRate = 1f;
 
     private WaitForSeconds baseSpawnRateWait;
@@ -26,7 +26,8 @@ public class UnitSpawner : MonoBehaviour
         {
             foreach (UnitPath path in paths)
             {
-                Instantiate(baseUnitPrefab, path.spawnpoint.position, Quaternion.identity);
+                Unit unit = Instantiate(baseUnitPrefab, path.spawnpoint.position, Quaternion.identity);
+                unit.SetTarget(path.endpoint);
             }
             yield return baseSpawnRateWait;
         }

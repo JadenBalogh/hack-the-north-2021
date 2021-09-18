@@ -437,7 +437,7 @@ MonoBehaviour:
     endpoint: {fileID: 1545485390}
   - spawnpoint: {fileID: 1372436127}
     endpoint: {fileID: 1451024932}
-  baseUnitPrefab: {fileID: 693858297048856181, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 2
 --- !u!1 &1372436126
 GameObject:
