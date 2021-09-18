@@ -681,6 +681,11 @@ MonoBehaviour:
   - {fileID: 1664206371}
   - {fileID: 968358067}
   - {fileID: 676298237}
+  myList:
+  - text one
+  - second
+  - third
+  - jaden goat
 --- !u!1 &535534596
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,32 +11,71 @@ public class InputManager : MonoBehaviour
 
     public List<GameObject> textElements;
 
-    string[] myList = new string[] { "test text", "tyui", "opas", "chaeyoungfromtwice" };
+    public string[] myList;
+
+    public delegate void ActionCallback();
+
+    public List<ActionCallback> callbacks = new List<ActionCallback>() { PlaceholderCallbacks.Callback1, PlaceholderCallbacks.Callback2, PlaceholderCallbacks.Callback3, PlaceholderCallbacks.Callback4 };
 
     void Start()
     {
         inputField = GetComponentInChildren<InputField>();
         inputField.Select();
         inputField.ActivateInputField();
-        for (int i = 0; i < textElements.Count; i++)
-        {
-            textElements[i].GetComponent<Text>().text = myList[i];
-        }
+        RestTexts();
     }
 
     public void ReadInput(string myStr)
     {
+        // On escape key pressed, reset everything
+        if (myStr == "")
+        {
+            currentString = "";
+            RestTexts();
+            inputField.Select();
+            inputField.ActivateInputField();
+            return;
+        }
+
         char lastTyped = myStr[myStr.Length - 1];
+        currentString += lastTyped;
+
+        bool noMatch = true;
+
         for (int i = 0; i < textElements.Count; i++)
         {
             string currentWord = myList[i];
-            if (currentWord[currentString.Length] == lastTyped)
+            if (currentString.Length <= currentWord.Length && currentString == currentWord.Substring(0, currentString.Length))
             {
-                currentString += lastTyped;
-                string moreGreen = GetStringWithGreenUpTo(currentWord, currentString.Length);
-                textElements[i].GetComponent<Text>().text = moreGreen;
+                noMatch = false;
+
+                if (currentString == currentWord)
+                {
+                    callbacks[i]();
+                    currentString = "";
+                    RestTexts();
+                }
+                else
+                {
+                    string moreGreen = GetStringWithGreenUpTo(currentWord, currentString.Length);
+                    textElements[i].GetComponent<Text>().text = moreGreen;
+                }
             }
         }
+
+        if (noMatch)
+        {
+            currentString = currentString.Substring(0, currentString.Length - 1);
+        }
+    }
+
+    void RestTexts()
+    {
+        for (int i = 0; i < textElements.Count; i++)
+        {
+            textElements[i].GetComponent<Text>().text = myList[i];
+        }
+
     }
 
     string GetStringWithGreenUpTo(string input, int max)
