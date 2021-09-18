@@ -11,7 +11,7 @@ public class InputManager : MonoBehaviour
 
     public List<GameObject> textElements;
 
-    public string[] myList;
+    public string[] wordList;
 
     public delegate void ActionCallback();
 
@@ -44,7 +44,7 @@ public class InputManager : MonoBehaviour
 
         for (int i = 0; i < textElements.Count; i++)
         {
-            string currentWord = myList[i];
+            string currentWord = wordList[i];
             if (currentString.Length <= currentWord.Length && currentString == currentWord.Substring(0, currentString.Length))
             {
                 noMatch = false;
@@ -73,7 +73,7 @@ public class InputManager : MonoBehaviour
     {
         for (int i = 0; i < textElements.Count; i++)
         {
-            textElements[i].GetComponent<Text>().text = myList[i];
+            textElements[i].GetComponent<Text>().text = wordList[i];
         }
 
     }
