@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Photon.Pun;
 
-public abstract class PlayerObject : MonoBehaviour
+public abstract class PlayerObject : MonoBehaviourPun, IPunObservable
 {
     [SerializeField] private int defaultPlayerId;
     private int playerId;
@@ -50,6 +51,18 @@ public abstract class PlayerObject : MonoBehaviour
     protected virtual void Start()
     {
         SetSprite(GameManager.SpriteSystem.GetSprite(spriteType, playerId));
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(PlayerId);
+        }
+        else
+        {
+            PlayerId = (int)stream.ReceiveNext();
+        }
     }
 
     public void SetSprite(Sprite sprite)

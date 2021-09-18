@@ -686,6 +686,7 @@ GameObject:
   - component: {fileID: 159691668}
   - component: {fileID: 159691667}
   - component: {fileID: 159691670}
+  - component: {fileID: 159691671}
   - component: {fileID: 159691669}
   m_Layer: 0
   m_Name: Tower
@@ -759,7 +760,7 @@ Transform:
   - {fileID: 1899880932}
   - {fileID: 101917037}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &159691669
 MonoBehaviour:
@@ -811,6 +812,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &159691671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159691666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 1
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 6
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &180250880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,6 +1381,7 @@ GameObject:
   - component: {fileID: 416028134}
   - component: {fileID: 416028133}
   - component: {fileID: 416028135}
+  - component: {fileID: 416028136}
   - component: {fileID: 416028132}
   m_Layer: 0
   m_Name: Base2
@@ -1458,7 +1482,7 @@ Transform:
   - {fileID: 1397313007}
   - {fileID: 1081383914}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!58 &416028135
 CircleCollider2D:
@@ -1476,6 +1500,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &416028136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416028131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 1
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 2
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,6 +1970,7 @@ GameObject:
   - component: {fileID: 691159955}
   - component: {fileID: 691159954}
   - component: {fileID: 691159957}
+  - component: {fileID: 691159958}
   - component: {fileID: 691159956}
   m_Layer: 0
   m_Name: Base
@@ -2057,6 +2104,28 @@ PolygonCollider2D:
       - {x: 0.38, y: -0.19999999}
       - {x: 0.5, y: 0.19999999}
       - {x: 0.5, y: 0.5}
+--- !u!114 &691159958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691159953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &692717387
 GameObject:
   m_ObjectHideFlags: 0
@@ -4082,6 +4151,7 @@ GameObject:
   - component: {fileID: 1451024932}
   - component: {fileID: 1451024931}
   - component: {fileID: 1451024934}
+  - component: {fileID: 1451024935}
   - component: {fileID: 1451024933}
   m_Layer: 0
   m_Name: Tower (2)
@@ -4155,7 +4225,7 @@ Transform:
   - {fileID: 1345898495}
   - {fileID: 8367755}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &1451024933
 MonoBehaviour:
@@ -4207,6 +4277,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1451024935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451024930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 1
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 5
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1461624187
 GameObject:
   m_ObjectHideFlags: 0
@@ -6042,6 +6134,7 @@ GameObject:
   - component: {fileID: 1545485390}
   - component: {fileID: 1545485389}
   - component: {fileID: 1545485392}
+  - component: {fileID: 1545485393}
   - component: {fileID: 1545485391}
   m_Layer: 0
   m_Name: Tower (1)
@@ -6115,7 +6208,7 @@ Transform:
   - {fileID: 1887392924}
   - {fileID: 1178511995}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -44.4}
 --- !u!114 &1545485391
 MonoBehaviour:
@@ -6167,6 +6260,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1545485393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545485388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 1
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 4
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1588410243
 GameObject:
   m_ObjectHideFlags: 0
@@ -6178,6 +6293,7 @@ GameObject:
   - component: {fileID: 1588410246}
   - component: {fileID: 1588410245}
   - component: {fileID: 1588410247}
+  - component: {fileID: 1588410248}
   - component: {fileID: 1588410244}
   m_Layer: 0
   m_Name: Tower (3)
@@ -6275,7 +6391,7 @@ Transform:
   - {fileID: 1395480954}
   - {fileID: 535534597}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!61 &1588410247
 BoxCollider2D:
@@ -6303,6 +6419,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1588410248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588410243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 1
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 3
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1621766948
 GameObject:
   m_ObjectHideFlags: 0

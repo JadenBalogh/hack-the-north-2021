@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class Unit : PlayerObject
+public class Unit : PlayerObject, IPunInstantiateMagicCallback
 {
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float enemyDetectRadius = 1f;
@@ -25,6 +26,8 @@ public class Unit : PlayerObject
 
     protected void Update()
     {
+        if (!PhotonNetwork.IsMasterClient) return;
+
         // Check for enemy in range
         if (currentEnemy == null)
         {
@@ -34,6 +37,7 @@ public class Unit : PlayerObject
         if (currentEnemy != null)
         {
             // Attack current enemy if valid
+            transform.rotation = Quaternion.FromToRotation(Vector2.up, currentEnemy.transform.position - transform.position);
             if (canAttack)
             {
                 StartCoroutine(AttackCooldown());
@@ -54,6 +58,15 @@ public class Unit : PlayerObject
         }
     }
 
+    public void OnPhotonInstantiate(PhotonMessageInfo info)
+    {
+        object[] data = info.photonView.InstantiationData;
+        UnitSpawner origin = PhotonView.Find((int)data[0]).GetComponent<UnitSpawner>();
+        UnitSpawner target = PhotonView.Find((int)data[1]).GetComponent<UnitSpawner>();
+        SetPath(origin, target);
+        PlayerId = origin.PlayerId;
+    }
+
     public void SetPath(UnitSpawner origin, UnitSpawner target)
     {
         this.origin = origin;
@@ -63,7 +76,10 @@ public class Unit : PlayerObject
     protected override void Die(int killerId)
     {
         base.Die(killerId);
-        Destroy(gameObject);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.Destroy(gameObject);
+        }
     }
 
     private void FindNearestEnemy()
