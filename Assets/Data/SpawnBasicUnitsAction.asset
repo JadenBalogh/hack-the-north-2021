@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SpawnBasicUnitsAction
   m_EditorClassIdentifier: 
   tag: 0
-  manaCost: 20
+  manaCost: 0
   unitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
