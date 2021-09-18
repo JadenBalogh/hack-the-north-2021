@@ -56,6 +56,20 @@ public class UnitSpawner : PlayerObject
         }
     }
 
+    public void SpawnUnit(Unit prefab)
+    {
+        foreach (UnitPath path in paths)
+        {
+            if (!path.Active) continue;
+            object[] obj = new object[]
+            {
+                photonView.ViewID,
+                path.endpoint.photonView.ViewID
+            };
+            PhotonNetwork.Instantiate(prefab.name, path.spawnpoint.position, Quaternion.identity, 0, obj);
+        }
+    }
+
     protected override void Die(int killerId)
     {
         base.Die(killerId);
@@ -67,16 +81,7 @@ public class UnitSpawner : PlayerObject
     {
         while (true)
         {
-            foreach (UnitPath path in paths)
-            {
-                if (!path.Active) continue;
-                object[] obj = new object[]
-                {
-                    photonView.ViewID,
-                    path.endpoint.photonView.ViewID
-                };
-                PhotonNetwork.Instantiate(baseUnitPrefab.name, path.spawnpoint.position, Quaternion.identity, 0, obj);
-            }
+            SpawnUnit(baseUnitPrefab);
             yield return baseSpawnRateWait;
         }
     }
