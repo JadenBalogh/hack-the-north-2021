@@ -774,7 +774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3feff10bda6f6e34a9953b26fb3a0267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPlayerId: -1
+  defaultPlayerId: 0
   spriteType: 2
   maxHealth: 10
   hitFlashDuration: 0.2
@@ -1403,7 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3feff10bda6f6e34a9953b26fb3a0267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPlayerId: 1
+  defaultPlayerId: 2
   spriteType: 1
   maxHealth: 20
   hitFlashDuration: 0.2
@@ -1519,7 +1519,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 1
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 416028132}
   sceneViewId: 2
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -1780,6 +1781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseMaxMana: 100
+  baseManaPerTick: 2
+  baseManaTickInterval: 1
 --- !u!1 &535534596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,7 +2077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3feff10bda6f6e34a9953b26fb3a0267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPlayerId: 0
+  defaultPlayerId: 1
   spriteType: 1
   maxHealth: 20
   hitFlashDuration: 0.2
@@ -4255,7 +4258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3feff10bda6f6e34a9953b26fb3a0267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPlayerId: -1
+  defaultPlayerId: 0
   spriteType: 2
   maxHealth: 10
   hitFlashDuration: 0.2
@@ -6239,7 +6242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3feff10bda6f6e34a9953b26fb3a0267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPlayerId: -1
+  defaultPlayerId: 0
   spriteType: 2
   maxHealth: 10
   hitFlashDuration: 0.2
@@ -6332,7 +6335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3feff10bda6f6e34a9953b26fb3a0267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPlayerId: -1
+  defaultPlayerId: 0
   spriteType: 2
   maxHealth: 10
   hitFlashDuration: 0.2

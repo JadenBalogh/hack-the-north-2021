@@ -76,6 +76,12 @@ public abstract class PlayerObject : MonoBehaviourPun, IPunObservable
         UpdateHealth(attackerId, -damage);
     }
 
+    [PunRPC]
+    public void TakeDamageRPC(int attackedId, int damage)
+    {
+        TakeDamage(attackedId, damage);
+    }
+
     public virtual void RestoreHealth(int amount)
     {
         UpdateHealth(playerId, amount);

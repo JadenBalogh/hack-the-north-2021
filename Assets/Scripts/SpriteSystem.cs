@@ -12,9 +12,9 @@ public class SpriteSystem : MonoBehaviour
         {
             if (set.spriteType == spriteType)
             {
-                if (playerId >= 0)
+                if (playerId > 0)
                 {
-                    return set.playerSprites[playerId];
+                    return set.playerSprites[playerId - 1];
                 }
                 else
                 {

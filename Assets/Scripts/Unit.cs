@@ -42,7 +42,7 @@ public class Unit : PlayerObject, IPunInstantiateMagicCallback
             if (canAttack)
             {
                 StartCoroutine(AttackCooldown());
-                currentEnemy.TakeDamage(PlayerId, damage);
+                currentEnemy.photonView.RPC("TakeDamageRPC", RpcTarget.All, PlayerId, damage);
             }
         }
         else if (target != null)
