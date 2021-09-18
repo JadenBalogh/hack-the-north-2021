@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
 
     public static SpriteSystem SpriteSystem { get; private set; }
+    public static ManaSystem ManaSystem { get; private set; }
 
     protected void Awake()
     {
@@ -18,5 +19,6 @@ public class GameManager : MonoBehaviour
         instance = this;
 
         SpriteSystem = GetComponent<SpriteSystem>();
+        ManaSystem = GetComponent<ManaSystem>();
     }
 }
