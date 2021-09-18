@@ -16,8 +16,9 @@ public class UnitSpawner : PlayerObject
         baseSpawnRateWait = new WaitForSeconds(baseSpawnRate);
     }
 
-    protected void Start()
+    protected override void Start()
     {
+        base.Start();
         OnPlayerIdChanged.AddListener((id) => ValidatePaths());
         ValidatePaths();
         StartCoroutine(SpawnUnitsLoop());
@@ -66,6 +67,7 @@ public class UnitSpawner : PlayerObject
                 if (!path.Active) continue;
                 Unit unit = Instantiate(baseUnitPrefab, path.spawnpoint.position, Quaternion.identity);
                 unit.SetPath(this, path.endpoint);
+                unit.PlayerId = PlayerId;
             }
             yield return baseSpawnRateWait;
         }
