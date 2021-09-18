@@ -20,6 +20,18 @@ public class UnitSpawner : MonoBehaviour
         StartCoroutine(SpawnUnitsLoop());
     }
 
+    public UnitSpawner GetNextSpawner(UnitSpawner origin)
+    {
+        foreach (UnitPath path in paths)
+        {
+            if (path.endpoint != origin)
+            {
+                return path.endpoint;
+            }
+        }
+        return origin;
+    }
+
     private IEnumerator SpawnUnitsLoop()
     {
         while (true)
@@ -27,7 +39,7 @@ public class UnitSpawner : MonoBehaviour
             foreach (UnitPath path in paths)
             {
                 Unit unit = Instantiate(baseUnitPrefab, path.spawnpoint.position, Quaternion.identity);
-                unit.SetTarget(path.endpoint);
+                unit.SetPath(this, path.endpoint);
             }
             yield return baseSpawnRateWait;
         }
@@ -37,7 +49,7 @@ public class UnitSpawner : MonoBehaviour
     public class UnitPath
     {
         public Transform spawnpoint;
-        public Transform endpoint;
+        public UnitSpawner endpoint;
 
         public bool Active { get; set; }
     }
