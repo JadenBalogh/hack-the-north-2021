@@ -635,7 +635,8 @@ MonoBehaviour:
     endpoint: {fileID: 480295710}
   - spawnpoint: {fileID: 1966957371}
     endpoint: {fileID: 2000333597}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!114 &97379132
 MonoBehaviour:
@@ -811,11 +812,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 50e4579dc82d24f6aa01a9c9b31a367b, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -1098,7 +1099,8 @@ MonoBehaviour:
     endpoint: {fileID: 958024895}
   - spawnpoint: {fileID: 1022535393}
     endpoint: {fileID: 1588410244}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!4 &110002987
 Transform:
@@ -1519,7 +1521,8 @@ MonoBehaviour:
     endpoint: {fileID: 1696585190}
   - spawnpoint: {fileID: 101917037}
     endpoint: {fileID: 691159959}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!61 &159691670
 BoxCollider2D:
@@ -2121,11 +2124,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 50e4579dc82d24f6aa01a9c9b31a367b, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -2517,7 +2520,8 @@ MonoBehaviour:
     endpoint: {fileID: 442421705}
   - spawnpoint: {fileID: 1081383914}
     endpoint: {fileID: 803228559}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 2
 --- !u!1 &417807024
 GameObject:
@@ -2643,7 +2647,8 @@ MonoBehaviour:
     endpoint: {fileID: 1657429284}
   - spawnpoint: {fileID: 782379996}
     endpoint: {fileID: 416028137}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!114 &442421706
 MonoBehaviour:
@@ -2915,7 +2920,8 @@ MonoBehaviour:
     endpoint: {fileID: 1696585190}
   - spawnpoint: {fileID: 2067224889}
     endpoint: {fileID: 97379131}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!4 &480295711
 Transform:
@@ -3173,11 +3179,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 50e4579dc82d24f6aa01a9c9b31a367b, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -3712,6 +3718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseMaxMana: 100
+  manaBar: {fileID: 0}
   baseManaPerTick: 2
   baseManaTickInterval: 1
 --- !u!114 &530794199
@@ -3865,7 +3872,8 @@ MonoBehaviour:
     endpoint: {fileID: 2102270770}
   - spawnpoint: {fileID: 801329440}
     endpoint: {fileID: 744049034}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!4 &541006176
 Transform:
@@ -4586,9 +4594,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 50e4579dc82d24f6aa01a9c9b31a367b, type: 3}
+    m_FontSize: 22
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -4937,7 +4945,8 @@ MonoBehaviour:
     endpoint: {fileID: 1545485391}
   - spawnpoint: {fileID: 1372436127}
     endpoint: {fileID: 852648800}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 2
 --- !u!1 &692717387
 GameObject:
@@ -5205,7 +5214,8 @@ MonoBehaviour:
     endpoint: {fileID: 541006175}
   - spawnpoint: {fileID: 823481806}
     endpoint: {fileID: 2000333597}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!114 &744049035
 MonoBehaviour:
@@ -5537,7 +5547,8 @@ MonoBehaviour:
     endpoint: {fileID: 1357773922}
   - spawnpoint: {fileID: 1527938701}
     endpoint: {fileID: 416028137}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!114 &803228560
 MonoBehaviour:
@@ -5869,7 +5880,8 @@ MonoBehaviour:
     endpoint: {fileID: 2047068473}
   - spawnpoint: {fileID: 1751352797}
     endpoint: {fileID: 691159959}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!114 &852648801
 MonoBehaviour:
@@ -6127,11 +6139,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 50e4579dc82d24f6aa01a9c9b31a367b, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -6579,7 +6591,8 @@ MonoBehaviour:
     endpoint: {fileID: 110002986}
   - spawnpoint: {fileID: 2102995651}
     endpoint: {fileID: 1451024933}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!4 &958024896
 Transform:
@@ -6909,9 +6922,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 50e4579dc82d24f6aa01a9c9b31a367b, type: 3}
+    m_FontSize: 22
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -7704,7 +7717,8 @@ MonoBehaviour:
     endpoint: {fileID: 1246270271}
   - spawnpoint: {fileID: 702753071}
     endpoint: {fileID: 2022111155}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!114 &1110301512
 MonoBehaviour:
@@ -7930,7 +7944,8 @@ MonoBehaviour:
     endpoint: {fileID: 2102270770}
   - spawnpoint: {fileID: 989154461}
     endpoint: {fileID: 2022111155}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!114 &1153553036
 MonoBehaviour:
@@ -8343,7 +8358,8 @@ MonoBehaviour:
     endpoint: {fileID: 2047068473}
   - spawnpoint: {fileID: 1557297452}
     endpoint: {fileID: 1110301511}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!4 &1246270272
 Transform:
@@ -8601,9 +8617,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 50e4579dc82d24f6aa01a9c9b31a367b, type: 3}
+    m_FontSize: 22
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -8680,11 +8696,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 50e4579dc82d24f6aa01a9c9b31a367b, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -8759,11 +8775,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 50e4579dc82d24f6aa01a9c9b31a367b, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -8934,7 +8950,8 @@ MonoBehaviour:
     endpoint: {fileID: 1924633331}
   - spawnpoint: {fileID: 1544080649}
     endpoint: {fileID: 803228559}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!114 &1357773923
 MonoBehaviour:
@@ -9282,9 +9299,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 50e4579dc82d24f6aa01a9c9b31a367b, type: 3}
+    m_FontSize: 22
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -9740,7 +9757,8 @@ MonoBehaviour:
     endpoint: {fileID: 958024895}
   - spawnpoint: {fileID: 8367755}
     endpoint: {fileID: 416028137}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!61 &1451024934
 BoxCollider2D:
@@ -14257,7 +14275,8 @@ MonoBehaviour:
     endpoint: {fileID: 1797818924}
   - spawnpoint: {fileID: 1178511995}
     endpoint: {fileID: 691159959}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!61 &1545485392
 BoxCollider2D:
@@ -14380,7 +14399,8 @@ MonoBehaviour:
     endpoint: {fileID: 110002986}
   - spawnpoint: {fileID: 535534597}
     endpoint: {fileID: 2000333597}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!212 &1588410245
 SpriteRenderer:
@@ -14556,11 +14576,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 2
+    m_Font: {fileID: 12800000, guid: 50e4579dc82d24f6aa01a9c9b31a367b, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -14731,7 +14751,8 @@ MonoBehaviour:
     endpoint: {fileID: 1797818924}
   - spawnpoint: {fileID: 451951989}
     endpoint: {fileID: 442421705}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!4 &1657429285
 Transform:
@@ -14907,9 +14928,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 50e4579dc82d24f6aa01a9c9b31a367b, type: 3}
+    m_FontSize: 22
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -14970,7 +14991,8 @@ MonoBehaviour:
     endpoint: {fileID: 480295710}
   - spawnpoint: {fileID: 222059723}
     endpoint: {fileID: 159691669}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!4 &1696585191
 Transform:
@@ -15160,7 +15182,8 @@ MonoBehaviour:
     endpoint: {fileID: 1924633331}
   - spawnpoint: {fileID: 1235821074}
     endpoint: {fileID: 2022111155}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!114 &1748357815
 MonoBehaviour:
@@ -15380,7 +15403,8 @@ MonoBehaviour:
     endpoint: {fileID: 1657429284}
   - spawnpoint: {fileID: 1173303544}
     endpoint: {fileID: 1545485391}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!4 &1797818925
 Transform:
@@ -16232,7 +16256,8 @@ MonoBehaviour:
     endpoint: {fileID: 1357773922}
   - spawnpoint: {fileID: 827559229}
     endpoint: {fileID: 1748357814}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!4 &1924633332
 Transform:
@@ -17019,7 +17044,8 @@ MonoBehaviour:
     endpoint: {fileID: 744049034}
   - spawnpoint: {fileID: 1044802615}
     endpoint: {fileID: 97379131}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 2
 --- !u!1 &2022111149
 GameObject:
@@ -17187,7 +17213,8 @@ MonoBehaviour:
     endpoint: {fileID: 1153553035}
   - spawnpoint: {fileID: 821980568}
     endpoint: {fileID: 1748357814}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 2
 --- !u!1 &2047068472
 GameObject:
@@ -17231,7 +17258,8 @@ MonoBehaviour:
     endpoint: {fileID: 1246270271}
   - spawnpoint: {fileID: 548561817}
     endpoint: {fileID: 852648800}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!4 &2047068474
 Transform:
@@ -17451,7 +17479,8 @@ MonoBehaviour:
     endpoint: {fileID: 541006175}
   - spawnpoint: {fileID: 875888753}
     endpoint: {fileID: 1153553035}
-  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
+  baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360,
+    type: 3}
   baseSpawnRate: 3
 --- !u!114 &2102270771
 MonoBehaviour:
