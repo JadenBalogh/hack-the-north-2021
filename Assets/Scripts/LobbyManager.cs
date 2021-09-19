@@ -14,6 +14,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     [SerializeField] private TextMeshProUGUI[] playerLabels;
     [SerializeField] private Button startButton;
+    [SerializeField] private string mainScene = "Main";
 
     private bool isReady = false;
 
@@ -42,7 +43,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
-        PhotonNetwork.LoadLevel("Main");
+        PhotonNetwork.LoadLevel(mainScene);
     }
 
     private void RefreshLabels()
