@@ -6,6 +6,8 @@ using Photon.Pun;
 public class UnitSpawner : PlayerObject
 {
     [SerializeField] private UnitPath[] paths;
+    public UnitPath[] Paths { get => paths; }
+
     [SerializeField] private Unit baseUnitPrefab;
     [SerializeField] private float baseSpawnRate = 1f;
 
@@ -44,10 +46,11 @@ public class UnitSpawner : PlayerObject
     ///<summary>Checks the alliance of all connected paths and updates path Active status accordingly.</summary>
     public void ValidatePaths()
     {
+        bool isBase = GetType() == typeof(UnitBase);
         foreach (UnitPath path in paths)
         {
             bool prevActiveStatus = path.Active;
-            bool newActiveStatus = IsEnemy(path.endpoint);
+            bool newActiveStatus = isBase || IsEnemy(path.endpoint) || (PlayerId > 0 && IsPathTowardsEnemy(path));
             path.Active = newActiveStatus;
             if (prevActiveStatus != newActiveStatus)
             {
@@ -81,6 +84,22 @@ public class UnitSpawner : PlayerObject
         base.Die(killerId);
         PlayerId = killerId;
         ResetHealth();
+    }
+
+    private bool IsPathTowardsEnemy(UnitPath path)
+    {
+        if (path.endpoint.TryGetComponent<UnitBase>(out UnitBase unitBase))
+        {
+            return unitBase.PlayerId != PlayerId;
+        }
+        foreach (UnitPath next in path.endpoint.Paths)
+        {
+            if (next.endpoint != this)
+            {
+                return IsPathTowardsEnemy(next);
+            }
+        }
+        return false;
     }
 
     private IEnumerator SpawnUnitsLoop()
