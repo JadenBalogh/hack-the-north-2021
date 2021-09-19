@@ -13,7 +13,7 @@ public class ActionSystem : MonoBehaviour
     {
         foreach (Action action in actions)
         {
-            actionTargets.Add(action.tag, action);
+            actionTargets.Add(action.Tag, action);
         }
     }
 

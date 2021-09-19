@@ -34,6 +34,16 @@ public class ManaSystem : MonoBehaviour
         GUILayout.Label("Mana: " + Mana + " / " + MaxMana);
     }
 
+    public void BoostMaxMana(int boost)
+    {
+        MaxMana += boost;
+    }
+
+    public void BoostManaPerTick(int boost)
+    {
+        ManaPerTick += boost;
+    }
+
     public void AddMana(int amount)
     {
         Mana = Mathf.Clamp(Mana + amount, 0, MaxMana);

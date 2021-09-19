@@ -1,4 +1,8 @@
 public enum ActionTag
 {
-    SpawnBasicUnits
+    SpawnBasicUnits,
+    SpawnFastUnits,
+    SpawnAntiBuildingUnits,
+    SpawnAOEUnits,
+    GainKnowledge
 }

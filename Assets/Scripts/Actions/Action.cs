@@ -5,16 +5,20 @@ using UnityEngine.Events;
 
 public abstract class Action : ScriptableObject
 {
-    public ActionTag tag;
-    public int manaCost;
+    [SerializeField] private ActionTag tag;
+    public ActionTag Tag { get => tag; }
+
+    [SerializeField] private int manaCost;
 
     public void Invoke()
     {
-        if (GameManager.ManaSystem.SpendMana(manaCost))
+        if (GameManager.ManaSystem.SpendMana(GetManaCost()))
         {
             OnInvokeSuccess();
         }
     }
+
+    protected virtual int GetManaCost() => manaCost;
 
     protected abstract void OnInvokeSuccess();
 }

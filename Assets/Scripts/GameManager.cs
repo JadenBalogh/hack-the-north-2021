@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public static SpriteSystem SpriteSystem { get; private set; }
     public static ManaSystem ManaSystem { get; private set; }
+    public static ActionSystem ActionSystem { get; private set; }
 
     [SerializeField] private UnitSpawner[] bases;
 
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
 
         SpriteSystem = GetComponent<SpriteSystem>();
         ManaSystem = GetComponent<ManaSystem>();
+        ActionSystem = GetComponent<ActionSystem>();
     }
 
     public static UnitSpawner GetLocalBase()
