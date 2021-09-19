@@ -86,8 +86,11 @@ public class UnitSpawner : PlayerObject
         ResetHealth();
     }
 
-    private bool IsPathTowardsEnemy(UnitPath path)
+    private bool IsPathTowardsEnemy(UnitPath path) => IsPathTowardsEnemy(path, 0);
+
+    private bool IsPathTowardsEnemy(UnitPath path, int count)
     {
+        if (count > 5) return false;
         if (path.endpoint.TryGetComponent<UnitBase>(out UnitBase unitBase))
         {
             return unitBase.PlayerId != PlayerId;
@@ -96,7 +99,7 @@ public class UnitSpawner : PlayerObject
         {
             if (next.endpoint != this)
             {
-                return IsPathTowardsEnemy(next);
+                return IsPathTowardsEnemy(next, count + 1);
             }
         }
         return false;
