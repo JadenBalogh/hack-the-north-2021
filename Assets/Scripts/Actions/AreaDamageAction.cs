@@ -12,7 +12,7 @@ public class AreaDamageAction : Action
     {
         int localPlayerId = PhotonNetwork.LocalPlayer.ActorNumber;
         HashSet<Unit> units = new HashSet<Unit>();
-        foreach (UnitSpawner building in GameManager.InfluenceSystem.OwnedBuildings)
+        foreach (UnitSpawner building in GameManager.InfluenceSystem.GetOwnedBuildings())
         {
             Collider2D[] results = Physics2D.OverlapCircleAll(building.transform.position, building.InfluenceRadius);
             foreach (Collider2D col in results)

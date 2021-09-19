@@ -5,26 +5,53 @@ using Photon.Pun;
 
 public class InfluenceSystem : MonoBehaviour
 {
-    public List<UnitSpawner> OwnedBuildings { get; private set; }
+    [SerializeField] private SpriteRenderer influenceZonePrefab;
 
-    protected void Awake()
-    {
-        OwnedBuildings = new List<UnitSpawner>();
-    }
+    private HashSet<int> ownedBuildingIds;
+    private UnitSpawner[] buildings;
+    private SpriteRenderer[] influenceZones;
 
     protected void Start()
     {
-        UnitSpawner[] buildings = GameObject.FindObjectsOfType<UnitSpawner>();
-        foreach (UnitSpawner building in buildings)
+        ownedBuildingIds = new HashSet<int>();
+        buildings = GameObject.FindObjectsOfType<UnitSpawner>();
+        influenceZones = new SpriteRenderer[buildings.Length];
+
+        for (int i = 0; i < buildings.Length; i++)
         {
-            building.OnPlayerIdChanged.AddListener((id) => UpdateOwnedBuildings(building, id));
+            UnitSpawner building = buildings[i];
+
+            // Setup building list
+            building.OnPlayerIdChanged.AddListener((id) => UpdateOwnedBuildings());
+            bool isMyBuilding = building.PlayerId == PhotonNetwork.LocalPlayer.ActorNumber;
+            if (isMyBuilding) ownedBuildingIds.Add(i);
+
+            // Setup influence zones
+            influenceZones[i] = Instantiate(influenceZonePrefab, building.transform.position, Quaternion.identity);
+            influenceZones[i].transform.localScale = new Vector2(building.InfluenceRadius, building.InfluenceRadius);
+            influenceZones[i].enabled = isMyBuilding;
         }
     }
 
-    private void UpdateOwnedBuildings(UnitSpawner building, int playerId)
+    public List<UnitSpawner> GetOwnedBuildings()
     {
-        bool isNowOwned = playerId == PhotonNetwork.LocalPlayer.ActorNumber;
-        if (isNowOwned) OwnedBuildings.Add(building);
-        else OwnedBuildings.Remove(building);
+        List<UnitSpawner> results = new List<UnitSpawner>();
+        foreach (int id in ownedBuildingIds)
+        {
+            results.Add(buildings[id]);
+        }
+        return results;
+    }
+
+    private void UpdateOwnedBuildings()
+    {
+        for (int i = 0; i < buildings.Length; i++)
+        {
+            bool isMine = buildings[i].PlayerId == PhotonNetwork.LocalPlayer.ActorNumber;
+            if (isMine) ownedBuildingIds.Add(i);
+            else ownedBuildingIds.Remove(i);
+
+            influenceZones[i].enabled = isMine;
+        }
     }
 }

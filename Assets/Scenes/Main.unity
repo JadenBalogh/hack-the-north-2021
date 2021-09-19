@@ -2426,6 +2426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ce172441284324ba39becc7b1ee4c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  influenceZonePrefab: {fileID: 951617773061056478, guid: ea37820c6d992cc428807e9f5de35d01, type: 3}
 --- !u!1 &534105093
 GameObject:
   m_ObjectHideFlags: 0
