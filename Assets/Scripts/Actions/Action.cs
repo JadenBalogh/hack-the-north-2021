@@ -9,6 +9,7 @@ public abstract class Action : ScriptableObject
     public ActionTag Tag { get => tag; }
 
     [SerializeField] private int manaCost;
+    public int ManaCost { get => manaCost; }
 
     public void Invoke()
     {
