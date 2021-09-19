@@ -1902,6 +1902,7 @@ MonoBehaviour:
   - {fileID: 1518572029}
   - {fileID: 1769714893}
   startButton: {fileID: 1493791975}
+  mainScene: LargerMain
 --- !u!4 &1799056376
 Transform:
   m_ObjectHideFlags: 0
