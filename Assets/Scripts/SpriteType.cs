@@ -1,4 +1,4 @@
 public enum SpriteType
 {
-    Unit, Spawner, Tower
+    Unit, FastUnit, AntiBuildingUnit, AOEUnit, Spawner, Tower
 }

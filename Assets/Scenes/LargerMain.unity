@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -1158,7 +1158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -1579,7 +1579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -2644,7 +2644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 3
-  spriteType: 1
+  spriteType: 4
   maxHealth: 20
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -2772,7 +2772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -3044,7 +3044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -3892,20 +3892,41 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 838011309cfd5cd48b0befb4af70f194, type: 3}
     - {fileID: 21300000, guid: 37276a6c87c1b3941a9ead4f3c206626, type: 3}
     - {fileID: 21300000, guid: 5c3895d5d5695834583a0fd243161742, type: 3}
-  - spriteType: 1
+  - spriteType: 4
     neutralSprite: {fileID: 0}
     playerSprites:
     - {fileID: 21300000, guid: 9bea57b88d9a5924eb81cc4bdab8d2eb, type: 3}
     - {fileID: 21300000, guid: 8476523479b68194e870b838a9d48490, type: 3}
     - {fileID: 21300000, guid: ac2cf79a62ab7d34aa4c5d76748ab72f, type: 3}
     - {fileID: 21300000, guid: 0f8aa5568fd32bb41b660fed72dc1cfe, type: 3}
-  - spriteType: 2
+  - spriteType: 5
     neutralSprite: {fileID: 21300000, guid: 4430edd242bcdea4c9e8fde8ae9e91fc, type: 3}
     playerSprites:
     - {fileID: 21300000, guid: 75eae2900326aa447b250fdb4817639c, type: 3}
     - {fileID: 21300000, guid: 7359db0efb8044c40a8e6532d15e8e86, type: 3}
     - {fileID: 21300000, guid: 2351064c68164374e896c39f9e7b9512, type: 3}
     - {fileID: 21300000, guid: 05111c25c4203324aa1fa1ac5caafa5b, type: 3}
+  - spriteType: 1
+    neutralSprite: {fileID: 0}
+    playerSprites:
+    - {fileID: 21300000, guid: b2294542feef5524283869c953f8c7f4, type: 3}
+    - {fileID: 21300000, guid: 8a49ffe13cf71a644b0513e0bca6f328, type: 3}
+    - {fileID: 21300000, guid: 39a87d0ebb9d72445be05b5a5939761c, type: 3}
+    - {fileID: 21300000, guid: 22b7e471000a8bc4eba0fa28df43ade1, type: 3}
+  - spriteType: 2
+    neutralSprite: {fileID: 0}
+    playerSprites:
+    - {fileID: 21300000, guid: 00ba7279f66fb464387fb099a312d2f9, type: 3}
+    - {fileID: 21300000, guid: 43ed390bd83844a45870e5061fd2c666, type: 3}
+    - {fileID: 21300000, guid: 30259b9cf6c849448ba34fcb338f46d7, type: 3}
+    - {fileID: 21300000, guid: 2b859d42f6269a34a9d4602cc39f962c, type: 3}
+  - spriteType: 3
+    neutralSprite: {fileID: 0}
+    playerSprites:
+    - {fileID: 21300000, guid: ab5d03ce85876934082b2e5f3ab56556, type: 3}
+    - {fileID: 21300000, guid: a177a20304ce975479195331c83aaa25, type: 3}
+    - {fileID: 21300000, guid: 15924a3ec1d2cfa43a3717c3facdc24e, type: 3}
+    - {fileID: 21300000, guid: 2793d6ac947abc04ca2b45b135097159, type: 3}
 --- !u!114 &530794198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4063,7 +4084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -5133,7 +5154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 1
-  spriteType: 1
+  spriteType: 4
   maxHealth: 20
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -5403,7 +5424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -5735,7 +5756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -6067,7 +6088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -6832,7 +6853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -7957,7 +7978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -8183,7 +8204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -8596,7 +8617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -9256,7 +9277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -10062,7 +10083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -14579,7 +14600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -14702,7 +14723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -15053,7 +15074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -15292,7 +15313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -15482,7 +15503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -15702,7 +15723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -16554,7 +16575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -17339,7 +17360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 2
-  spriteType: 1
+  spriteType: 4
   maxHealth: 20
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -17507,7 +17528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 4
-  spriteType: 1
+  spriteType: 4
   maxHealth: 20
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -17553,7 +17574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
@@ -17773,7 +17794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPlayerId: 0
-  spriteType: 2
+  spriteType: 5
   maxHealth: 10
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
