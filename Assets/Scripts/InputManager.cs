@@ -37,6 +37,8 @@ public class InputManager : MonoBehaviour
 
     public void ReadInput(string myStr)
     {
+        if (!GameManager.Alive) return;
+
         // On escape key pressed, reset everything
         if (myStr == "")
         {
@@ -99,7 +101,6 @@ public class InputManager : MonoBehaviour
         {
             textElements[i].GetComponent<Text>().text = wordList[i];
         }
-
     }
 
     string GetStringWithGreenUpTo(string input, int max)
