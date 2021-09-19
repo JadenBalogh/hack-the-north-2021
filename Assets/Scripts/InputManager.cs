@@ -11,7 +11,7 @@ public class InputManager : MonoBehaviour
 
     private string lastString = "";
 
-    private string customString = "";
+    private string trackerString = "";
 
     public List<GameObject> textElements;
 
@@ -46,7 +46,7 @@ public class InputManager : MonoBehaviour
         {
             matchingString = "";
             lastString = "";
-            customString = "";
+            trackerString = "";
             ResetTextDisplays();
             inputField.Select();
             inputField.ActivateInputField();
@@ -60,9 +60,9 @@ public class InputManager : MonoBehaviour
             return;
         }
 
-        customString += myStr[myStr.Length - 1];
+        trackerString += myStr[myStr.Length - 1];
 
-        char lastTyped = customString[customString.Length - 1];
+        char lastTyped = trackerString[trackerString.Length - 1];
         matchingString += lastTyped;
 
         bool noMatch = true;
