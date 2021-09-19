@@ -17,6 +17,7 @@ public class Unit : PlayerObject, IPunInstantiateMagicCallback
     private UnitSpawner target;
     private PlayerObject currentEnemy;
     private bool canAttack = true;
+    private bool frozen = false;
 
     private Collider2D[] overlapResults = new Collider2D[50];
     private WaitForSeconds attackCooldownWait;
@@ -30,6 +31,7 @@ public class Unit : PlayerObject, IPunInstantiateMagicCallback
     protected void Update()
     {
         if (!PhotonNetwork.IsMasterClient) return;
+        if (frozen) return;
 
         // Check for enemy in range
         if (currentEnemy == null)
@@ -92,6 +94,9 @@ public class Unit : PlayerObject, IPunInstantiateMagicCallback
         this.target = target;
     }
 
+    [PunRPC]
+    public void FreezeRPC(float duration) => StartCoroutine(FreezeTimer(duration));
+
     protected override void Die(int killerId)
     {
         base.Die(killerId);
@@ -139,5 +144,12 @@ public class Unit : PlayerObject, IPunInstantiateMagicCallback
         canAttack = false;
         yield return attackCooldownWait;
         canAttack = true;
+    }
+
+    private IEnumerator FreezeTimer(float duration)
+    {
+        frozen = true;
+        yield return new WaitForSeconds(duration);
+        frozen = false;
     }
 }
