@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class ManaSystem : MonoBehaviour
 {
     [SerializeField] private int baseMaxMana = 100;
-    [SerializeField] private GameObject manaBar;
     public int MaxMana { get; private set; }
     public int Mana { get; private set; }
     public UnityEvent<int> OnManaChanged { get; private set; }
@@ -20,7 +19,6 @@ public class ManaSystem : MonoBehaviour
     protected void Awake()
     {
         OnManaChanged = new UnityEvent<int>();
-        OnManaChanged.AddListener(UpdateManaBar);
         MaxMana = baseMaxMana;
         ManaPerTick = baseManaPerTick;
         ManaTickInterval = baseManaTickInterval;
@@ -29,11 +27,6 @@ public class ManaSystem : MonoBehaviour
     protected void Start()
     {
         StartCoroutine(PassiveManaTick());
-    }
-
-    protected void OnGUI()
-    {
-        GUILayout.Label("Mana: " + Mana + " / " + MaxMana);
     }
 
     public void BoostMaxMana(int boost)
@@ -61,11 +54,6 @@ public class ManaSystem : MonoBehaviour
             OnManaChanged.Invoke(Mana);
         }
         return canAfford;
-    }
-
-    private void UpdateManaBar(int mana)
-    {
-        manaBar.GetComponent<RectTransform>().sizeDelta = new Vector2(mana, 25);
     }
 
     private IEnumerator PassiveManaTick()
