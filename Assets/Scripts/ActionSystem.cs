@@ -9,8 +9,11 @@ public class ActionSystem : MonoBehaviour
 
     private Dictionary<ActionTag, Action> actionTargets = new Dictionary<ActionTag, Action>();
 
+    public UnityEvent<Action> OnActionInvoked { get; private set; }
+
     protected void Awake()
     {
+        OnActionInvoked = new UnityEvent<Action>();
         foreach (Action action in actions)
         {
             actionTargets.Add(action.Tag, action);
@@ -28,5 +31,10 @@ public class ActionSystem : MonoBehaviour
     public void InvokeAction(ActionTag tag)
     {
         actionTargets[tag].Invoke();
+    }
+
+    public Action GetAction(ActionTag tag)
+    {
+        return actionTargets[tag];
     }
 }
