@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public static SpriteSystem SpriteSystem { get; private set; }
     public static ManaSystem ManaSystem { get; private set; }
+
+    [SerializeField] private UnitSpawner[] bases;
 
     protected void Awake()
     {
@@ -20,5 +23,10 @@ public class GameManager : MonoBehaviour
 
         SpriteSystem = GetComponent<SpriteSystem>();
         ManaSystem = GetComponent<ManaSystem>();
+    }
+
+    public static UnitSpawner GetLocalBase()
+    {
+        return instance.bases[PhotonNetwork.LocalPlayer.ActorNumber - 1];
     }
 }
