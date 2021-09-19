@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
         RemainingPlayers = new List<int>() { 1, 2, 3, 4 };
         OnGameOver = new UnityEvent<string>();
+        Alive = true;
     }
 
     public static UnitBase GetLocalBase()

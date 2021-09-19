@@ -19,8 +19,7 @@ public class UnitBase : UnitSpawner
             if (GameManager.RemainingPlayers.Count == 1)
             {
                 int id = GameManager.RemainingPlayers[0];
-                Player winner = PhotonNetwork.PlayerList[id - 1];
-                photonView.RPC("GameOverRPC", RpcTarget.All, winner.NickName);
+                photonView.RPC("GameOverRPC", RpcTarget.All, "Player" + id);
             }
         }
     }
