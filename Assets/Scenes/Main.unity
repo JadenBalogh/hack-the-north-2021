@@ -1784,8 +1784,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bases:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 691159959}
+  - {fileID: 2000333597}
+  - {fileID: 416028137}
+  - {fileID: 2022111155}
 --- !u!114 &530794197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1907,7 +1909,7 @@ MonoBehaviour:
   - {fileID: 1664206371}
   - {fileID: 968358067}
   - {fileID: 676298237}
-  wordList: []
+  actionTags: 00000000000000000000000000000000
 --- !u!1 &535534596
 GameObject:
   m_ObjectHideFlags: 0
