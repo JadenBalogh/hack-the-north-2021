@@ -9,7 +9,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 {
     private static LobbyManager instance;
 
-    private const string GAME_VERSION = "1";
+    private const string GAME_VERSION = "2";
     private const byte PLAYERS_PER_ROOM = 4;
 
     [SerializeField] private TextMeshProUGUI[] playerLabels;

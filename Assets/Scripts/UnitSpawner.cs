@@ -11,6 +11,9 @@ public class UnitSpawner : PlayerObject
     [SerializeField] private Unit baseUnitPrefab;
     [SerializeField] private float baseSpawnRate = 1f;
 
+    [SerializeField] private float influenceRadius = 10f;
+    public float InfluenceRadius { get => influenceRadius; }
+
     private WaitForSeconds baseSpawnRateWait;
 
     protected override void Awake()

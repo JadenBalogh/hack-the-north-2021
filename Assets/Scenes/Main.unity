@@ -391,6 +391,7 @@ MonoBehaviour:
     endpoint: {fileID: 2000333597}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
+  influenceRadius: 10
 --- !u!114 &97379132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,6 +895,7 @@ MonoBehaviour:
     endpoint: {fileID: 691159959}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
+  influenceRadius: 10
 --- !u!61 &159691670
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1282,6 +1284,7 @@ MonoBehaviour:
     endpoint: {fileID: 803228559}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 2
+  influenceRadius: 10
 --- !u!1 &442421704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1329,7 @@ MonoBehaviour:
     endpoint: {fileID: 416028137}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
+  influenceRadius: 10
 --- !u!114 &442421706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1855,6 +1859,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 621813c69edce484199f3b4f3863e8ef, type: 2}
   - {fileID: 11400000, guid: 6ef7c7d2671adc6489931723d81229b5, type: 2}
   - {fileID: 11400000, guid: beaf08cfcf061894883ef62c3589db6f, type: 2}
+  - {fileID: 11400000, guid: b8fb617b2f48e7d4eb0838ec12b8e25b, type: 2}
 --- !u!1 &534105093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,6 +2392,7 @@ MonoBehaviour:
     endpoint: {fileID: 852648800}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 2
+  influenceRadius: 10
 --- !u!1 &692717387
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,6 +2631,7 @@ MonoBehaviour:
     endpoint: {fileID: 2000333597}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
+  influenceRadius: 10
 --- !u!114 &744049035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2897,6 +2904,7 @@ MonoBehaviour:
     endpoint: {fileID: 416028137}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
+  influenceRadius: 10
 --- !u!114 &803228560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3117,6 +3125,7 @@ MonoBehaviour:
     endpoint: {fileID: 691159959}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
+  influenceRadius: 10
 --- !u!114 &852648801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4078,6 +4087,7 @@ MonoBehaviour:
     endpoint: {fileID: 2022111155}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
+  influenceRadius: 10
 --- !u!114 &1110301512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4304,6 +4314,7 @@ MonoBehaviour:
     endpoint: {fileID: 2022111155}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
+  influenceRadius: 10
 --- !u!114 &1153553036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5442,6 +5453,7 @@ MonoBehaviour:
     endpoint: {fileID: 416028137}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
+  influenceRadius: 10
 --- !u!61 &1451024934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6854,6 +6866,7 @@ MonoBehaviour:
     endpoint: {fileID: 691159959}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
+  influenceRadius: 10
 --- !u!61 &1545485392
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6947,6 +6960,7 @@ MonoBehaviour:
     endpoint: {fileID: 2000333597}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
+  influenceRadius: 10
 --- !u!212 &1588410245
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7325,6 +7339,7 @@ MonoBehaviour:
     endpoint: {fileID: 2022111155}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 3
+  influenceRadius: 10
 --- !u!114 &1748357815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8090,6 +8105,7 @@ MonoBehaviour:
     endpoint: {fileID: 97379131}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 2
+  influenceRadius: 10
 --- !u!1 &2022111149
 GameObject:
   m_ObjectHideFlags: 0
@@ -8258,6 +8274,7 @@ MonoBehaviour:
     endpoint: {fileID: 1748357814}
   baseUnitPrefab: {fileID: -5193880681090212588, guid: 80136581727808640a4c0886bea3c360, type: 3}
   baseSpawnRate: 2
+  influenceRadius: 10
 --- !u!1 &2070633760
 GameObject:
   m_ObjectHideFlags: 0

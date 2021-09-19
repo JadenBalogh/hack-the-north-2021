@@ -4,5 +4,6 @@ public enum ActionTag
     SpawnFastUnits,
     SpawnAntiBuildingUnits,
     SpawnAOEUnits,
-    GainKnowledge
+    GainKnowledge,
+    AreaDamage
 }
