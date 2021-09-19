@@ -1,37 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class UnitSpawner : MonoBehaviour
+public class UnitSpawner : PlayerObject
 {
-    [SerializeField] private int defaultPlayerId;
-    private int playerId;
-    public int PlayerId
-    {
-        get => playerId;
-        set
-        {
-            ValidatePaths();
-            playerId = value;
-        }
-    }
-
     [SerializeField] private UnitPath[] paths;
     [SerializeField] private Unit baseUnitPrefab;
     [SerializeField] private float baseSpawnRate = 1f;
 
     private WaitForSeconds baseSpawnRateWait;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         baseSpawnRateWait = new WaitForSeconds(baseSpawnRate);
-        playerId = defaultPlayerId;
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+        OnPlayerIdChanged.AddListener((id) => ValidatePaths());
         ValidatePaths();
-        StartCoroutine(SpawnUnitsLoop());
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            StartCoroutine(SpawnUnitsLoop());
+        }
     }
 
     public UnitSpawner GetNextSpawner(UnitSpawner origin)
@@ -52,7 +47,7 @@ public class UnitSpawner : MonoBehaviour
         foreach (UnitPath path in paths)
         {
             bool prevActiveStatus = path.Active;
-            bool newActiveStatus = playerId != path.endpoint.PlayerId;
+            bool newActiveStatus = IsEnemy(path.endpoint);
             path.Active = newActiveStatus;
             if (prevActiveStatus != newActiveStatus)
             {
@@ -61,16 +56,38 @@ public class UnitSpawner : MonoBehaviour
         }
     }
 
+    public void SpawnUnit(string prefabName)
+    {
+        foreach (UnitPath path in paths)
+        {
+            if (!path.Active) continue;
+            object[] obj = new object[]
+            {
+                photonView.ViewID,
+                path.endpoint.photonView.ViewID
+            };
+            PhotonNetwork.Instantiate(prefabName, path.spawnpoint.position, Quaternion.identity, 0, obj);
+        }
+    }
+
+    [PunRPC]
+    public void SpawnUnitRPC(string prefabName)
+    {
+        SpawnUnit(prefabName);
+    }
+
+    protected override void Die(int killerId)
+    {
+        base.Die(killerId);
+        PlayerId = killerId;
+        ResetHealth();
+    }
+
     private IEnumerator SpawnUnitsLoop()
     {
         while (true)
         {
-            foreach (UnitPath path in paths)
-            {
-                if (!path.Active) continue;
-                Unit unit = Instantiate(baseUnitPrefab, path.spawnpoint.position, Quaternion.identity);
-                unit.SetPath(this, path.endpoint);
-            }
+            SpawnUnit(baseUnitPrefab.name);
             yield return baseSpawnRateWait;
         }
     }
