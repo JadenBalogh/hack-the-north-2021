@@ -177,7 +177,7 @@ MonoBehaviour:
   hitFlashDuration: 0.2
   hitFlashAlpha: 0.5
   moveSpeed: 0.8
-  enemyDetectRadius: 0.8
+  enemyDetectRadius: 1
   damage: 2
   buildingDamageMultiplier: 0.5
   isAttackAOE: 1
