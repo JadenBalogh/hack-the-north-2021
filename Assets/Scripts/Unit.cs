@@ -8,6 +8,8 @@ public class Unit : PlayerObject, IPunInstantiateMagicCallback
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float enemyDetectRadius = 1f;
     [SerializeField] private int damage = 1;
+    [SerializeField] private float buildingDamageMultiplier = 1f;
+    [SerializeField] private bool isAttackAOE = false;
     [SerializeField] private float attackCooldown = 0.8f;
     [SerializeField] private int deathManaReward = 5;
 
@@ -42,7 +44,23 @@ public class Unit : PlayerObject, IPunInstantiateMagicCallback
             if (canAttack)
             {
                 StartCoroutine(AttackCooldown());
-                currentEnemy.photonView.RPC("TakeDamageRPC", RpcTarget.All, PlayerId, damage);
+
+                List<PlayerObject> attackTargets = new List<PlayerObject>();
+                if (isAttackAOE)
+                {
+                    attackTargets.AddRange(GetNearbyEnemies());
+                }
+                else
+                {
+                    attackTargets.Add(currentEnemy);
+                }
+
+                foreach (PlayerObject attackTarget in attackTargets)
+                {
+                    bool isBuilding = attackTarget.GetType() == typeof(UnitSpawner);
+                    int finalDamage = Mathf.CeilToInt(damage * (isBuilding ? buildingDamageMultiplier : 1));
+                    attackTarget.photonView.RPC("TakeDamageRPC", RpcTarget.All, PlayerId, finalDamage);
+                }
             }
         }
         else if (target != null)
@@ -99,6 +117,21 @@ public class Unit : PlayerObject, IPunInstantiateMagicCallback
                 currentEnemy.OnDeath.AddListener(() => currentEnemy = null);
             }
         }
+    }
+
+    private List<PlayerObject> GetNearbyEnemies()
+    {
+        int numResults = Physics2D.OverlapCircleNonAlloc(transform.position, enemyDetectRadius, overlapResults);
+        List<PlayerObject> nearbyEnemies = new List<PlayerObject>();
+        for (int i = 0; i < numResults; i++)
+        {
+            Collider2D col = overlapResults[i];
+            if (col.TryGetComponent<PlayerObject>(out PlayerObject obj) && IsEnemy(obj))
+            {
+                nearbyEnemies.Add(obj);
+            }
+        }
+        return nearbyEnemies;
     }
 
     private IEnumerator AttackCooldown()

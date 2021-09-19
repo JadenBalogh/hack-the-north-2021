@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-[CreateAssetMenu(fileName = "SpawnBasicUnitsAction", menuName = "Actions/SpawnBasicUnitsAction", order = 50)]
-public class SpawnBasicUnitsAction : Action
+[CreateAssetMenu(fileName = "SpawnUnitsAction", menuName = "Actions/SpawnUnitsAction", order = 50)]
+public class SpawnUnitsAction : Action
 {
     [SerializeField] private Unit unitPrefab;
 

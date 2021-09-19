@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b3bcc0dcf179b448768c10da5dd2cd, type: 3}
+  m_Name: SpawnAntiBuildingUnitsAction
+  m_EditorClassIdentifier: 
+  tag: 2
+  manaCost: 25
+  unitPrefab: {fileID: 4696308818113057779, guid: 8003ddcd7598c0d4d9475db4b5fb0ac6, type: 3}

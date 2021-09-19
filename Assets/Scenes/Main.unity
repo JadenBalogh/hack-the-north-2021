@@ -1851,6 +1851,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions:
   - {fileID: 11400000, guid: 4cd70e54482e96f4fba028de618f587b, type: 2}
+  - {fileID: 11400000, guid: 4600c7f537ea32d429adfbd8e05f1e95, type: 2}
+  - {fileID: 11400000, guid: 621813c69edce484199f3b4f3863e8ef, type: 2}
+  - {fileID: 11400000, guid: 6ef7c7d2671adc6489931723d81229b5, type: 2}
 --- !u!1 &534105093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,7 +1912,7 @@ MonoBehaviour:
   - {fileID: 1664206371}
   - {fileID: 968358067}
   - {fileID: 676298237}
-  actionTags: 00000000000000000000000000000000
+  actionTags: 00000000010000000200000003000000
 --- !u!1 &535534596
 GameObject:
   m_ObjectHideFlags: 0
